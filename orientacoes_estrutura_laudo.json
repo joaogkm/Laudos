@@ -1,0 +1,10 @@
+{
+  "historico": "A IA deve incluir:\n- Contexto da ocorrência com base no que foi inserido no campo Histórico da Requisição\n- Fatores que levaram à requisição da perícia\n- Informações relevantes sobre o caso\n- Cronologia dos fatos principais\n- Dados do BO e requisitante",
+  "objetivo": "A IA deve incluir:\n- Ser suscinta para que este campo seja direto.\n- Finalidade da perícia solicitada utilizando como base o Histórico da Requisição e a natureza do BO\n- O que se pretende esclarecer\n- Escopo do trabalho pericial\n- Limitações e parâmetros da análise",
+  "quesitos": "A IA deve:\n- COPIAR EXATAMENTE o conteúdo do campo 'Quesito da Perícia' da página 01_CriaRelatorio\n- Manter a formatação original\n- Não alterar ou interpretar o conteúdo\n- Incluir todos os quesitos solicitados pelo requisitante",
+  "isolamento_preservacao": "A IA deve incluir:\n- Medidas de isolamento implementadas\n- Estado de preservação do local\n- Alterações observadas desde a ocorrência\n- Condições ambientais relevantes\n- Cuidados tomados para preservar evidências\n- Relato sobre a integridade do local\n- Estas informações devem ser retiradas do ditado pericial",
+  "exames": "A IA deve incluir:\n- Fotos e descrição do que foi verificado no local\n- Utilizar o ditado pericial para informações de exames que foram realizados pelo perito\n- Construir com as fotos e descrição o rito da perícia, conforme informações do ditado pericial.",
+  "conclusao": "A IA deve:\n- Responder a CADA quesito individualmente\n- Usar linguagem técnica e precisa\n- Fundamentar as respostas com base nos exames realizados\n- Apresentar conclusões claras e objetivas\n- Relacionar as respostas aos quesitos originais\n- Incluir fundamentação técnica quando necessário\n- Sugerir, quando necessários, novos quesitos que possam auxiliar ao caso",
+  "data_criacao": "N/A",
+  "versao": "1.0"
+}
