@@ -5,4 +5,5 @@ Pillow>=9.0.0
 python-docx>=0.8.11
 SpeechRecognition>=3.10.0
 openai
+dotenv
 # PyAudio>=0.2.11 
