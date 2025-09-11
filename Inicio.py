@@ -27,7 +27,7 @@ st.markdown(
     - Geração automática de documentos finais
     - Histórico de laudos gerados
     
-    ---
+    ----
     
     **Como começar:**
     1. Utilize o menu lateral para navegar entre as etapas do processo.
