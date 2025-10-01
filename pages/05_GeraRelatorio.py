@@ -239,13 +239,14 @@ def gerar_conclusao(dados, orientacoes):
                     "Você é um perito criminal experiente. Sua tarefa é concluir o relatório com as informações passadas previamente. Seja claro, simples e objetivo."
                     "É obrigatório responder aos quesitos inseridos no contexto."
                     "Esta parte deve conter apenas a resposta aos quesitos e a conclusão."
-                    "ATENÇÃO: No texto da conclusão, você DEVE, OBRIGATORIAMENTE, incluir a orientação de danos como uma composição de vetores, escolhendo e mencionando até das opções abaixo;\n"
+                    "ATENÇÃO: No texto da conclusão, você DEVE, OBRIGATORIAMENTE, incluir a orientação de danos como uma composição de vetores, escolhendo e mencionando duas das opções abaixo pois o dano sempre é bidimensional;\n"
                     "(1) da esquerda para a direita ou da direita para a esquerda;\n"
                     "(2) de dentro para fora ou de fora para dentro;\n"
                     "(3) de cima para baixo ou de baixo para cima.\n"
                     "(4) de frente para trás ou de trás para frente;\n"
                     "Explique claramente quais opções foram identificadas no caso analisado, conforme os dados apresentados. Não deixe de incluir essas duas orientações de danos na conclusão."
-                ),
+                    "Por exemplo: em uma batida entre dois veíuculos, o dano poderá ser de fora para dentro, pois o impacto causou amassados na lataria e da esquerda para a direita."
+                    "Outro exemplo: uma motocicleta bate na lateral de um veiculo, causando arranhões na sua lateral, da parte frontal para a parte traseira, ou seja, de fora para dentro pois houve amassamentos e de frente para trás"),
             },
             {
                 "role": "user",
