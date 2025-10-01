@@ -7,6 +7,22 @@ PASTA_LAUDOS = "relatorios"
 # Função para listar relatórios disponíveis
 
 
+st.title("Carregar Arquivos")
+st.markdown("""
+### Bem-vindo(a) à etapa de Carregamento de Fotografias
+
+Esta etapa permite nomear e carregar as fotografias para o relatório selecionado.
+
+Siga as instruções abaixo:
+- **1. Selecionar Relatório**: Use a **sidebar** para escolher um relatório existente.
+- **2. Nomear a Foto**: Na **sidebar**, preencha o campo "Nome da Foto".
+- **3. Escolher a Fotografia**: Ainda na **sidebar**, selecione a(s) imagem(ns) a carregar.
+- **4. Confirmar**: Clique no botão **CARREGAR FOTOS** para concluir.
+""")
+
+st.caption("Após concluir o carregamento, as imagens já incluídas no relatório serão exibidas abaixo (na página principal de Carregamento).")
+
+
 def listar_relatorios():
     return [nome for nome in os.listdir(PASTA_LAUDOS) if os.path.isdir(os.path.join(PASTA_LAUDOS, nome))]
 
