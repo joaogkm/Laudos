@@ -1,3 +1,6 @@
+import shutil
+from pathlib import Path
+from openpyxl import load_workbook
 import streamlit as st
 import json
 import os
@@ -163,3 +166,43 @@ st.markdown("""
 st.markdown("---")
 st.markdown(
     "*Página de Estrutura do Laudo Pericial - Sistema de Geração de Relatórios*")
+
+
+def limpar_historico_excel(
+    caminho_arquivo="historico_relatorios.xlsx",
+    nome_planilha=None,           # None = todas as planilhas
+    manter_cabecalho=True,        # True = mantém a linha 1
+    criar_backup=True             # True = cria backup .bak ao lado
+):
+    caminho = Path(caminho_arquivo)
+    if not caminho.exists():
+        raise FileNotFoundError(f"Arquivo não encontrado: {caminho}")
+
+    if criar_backup:
+        backup_path = caminho.with_suffix(caminho.suffix + ".bak")
+        shutil.copy2(caminho, backup_path)
+
+    wb = load_workbook(caminho)
+    planilhas = [wb[nome_planilha]] if nome_planilha else wb.worksheets
+
+    for ws in planilhas:
+        max_row = ws.max_row or 0
+        if max_row <= 1:
+            continue  # já só com cabeçalho (ou vazia)
+        if manter_cabecalho:
+            # Remove a partir da 2ª linha até o final
+            ws.delete_rows(2, max_row - 1)
+        else:
+            # Remove tudo
+            ws.delete_rows(1, max_row)
+
+    wb.save(caminho)
+    return True
+
+
+if st.button("Limpar histórico (manter cabeçalho)"):
+    try:
+        limpar_historico_excel("historico_relatorios.xlsx")
+        st.success("Histórico limpo com sucesso (cabeçalho preservado).")
+    except Exception as e:
+        st.error(f"Falha ao limpar: {e}")
