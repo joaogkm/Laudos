@@ -114,7 +114,7 @@ def gerar_preambulo(dados):
         data_pericia_extenso = str(dados["Data da Perícia"])
 
     preambulo = f"""
-Aos {data_pericia_extenso}, nesta cidade de São Paulo e no Instituto de Criminalística "Perito Criminal Dr. Octávio Eduardo de Brito Alvarenga", da Superintendência da Polícia Técnico-Científica, da Secretaria da Segurança Pública, em conformidade com o disposto no artigo 178 do Decreto-Lei n. 3.689, de 03 de Outubro de 1941; pelo Senhor Diretor deste I.C., foi designado o Perito Criminal DR. {dados["Nome do Perito"]} para proceder ao exame supra-especificado, em atendimento à requisição do {dados["Requisitante"]} do {dados.get("Destinatário", "")}, objeto do B.O. n {dados["Número do BO"]}.
+Aos {data_pericia_extenso}, nesta cidade de São Paulo e no Instituto de Criminalística "Perito Criminal Dr. Octávio Eduardo de Brito Alvarenga", da Superintendência da Polícia Técnico-Científica, da Secretaria da Segurança Pública, em conformidade com o disposto no artigo 178 do Decreto-Lei n. 3.689, de 03 de Outubro de 1941; pelo Senhor Diretor deste I.C. RICARDO LOPES ORTEGA, foi designado o Perito Criminal {dados["Nome do Perito"]} para proceder ao exame supra-especificado, em atendimento à requisição do {dados["Requisitante"]} do {dados.get("Destinatário", "")}, objeto do B.O. n {dados["Número do BO"]}.
 """
     return preambulo
 
