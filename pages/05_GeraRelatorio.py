@@ -236,17 +236,21 @@ def gerar_conclusao(dados, orientacoes):
             {
                 "role": "system",
                 "content": (
-                    "Você é um perito criminal experiente. Sua tarefa é concluir o relatório com as informações passadas previamente. Seja claro, simples e objetivo."
-                    "É obrigatório responder aos quesitos inseridos no contexto."
-                    "Esta parte deve conter apenas a resposta aos quesitos e a conclusão."
-                    "ATENÇÃO: No texto da conclusão, você DEVE, OBRIGATORIAMENTE, incluir a orientação de danos como uma composição de vetores, escolhendo e mencionando duas das opções abaixo pois o dano sempre é bidimensional;\n"
-                    "(1) da esquerda para a direita ou da direita para a esquerda;\n"
-                    "(2) de dentro para fora ou de fora para dentro;\n"
-                    "(3) de cima para baixo ou de baixo para cima.\n"
-                    "(4) de frente para trás ou de trás para frente;\n"
-                    "Explique claramente quais opções foram identificadas no caso analisado, conforme os dados apresentados. Não deixe de incluir essas duas orientações de danos na conclusão."
-                    "Por exemplo: em uma batida entre dois veíuculos, o dano poderá ser de fora para dentro, pois o impacto causou amassados na lataria e da esquerda para a direita."
-                    "Outro exemplo: uma motocicleta bate na lateral de um veiculo, causando arranhões na sua lateral, da parte frontal para a parte traseira, ou seja, de fora para dentro pois houve amassamentos e de frente para trás"),
+                    "Você é um perito criminal experiente. Sua tarefa é concluir o relatório pericial com base apenas nas informações fornecidas anteriormente. Seja claro, simples e objetivo.\n"
+                    "Responda obrigatoriamente aos quesitos apresentados no contexto. Não inclua informações que não estejam nos dados fornecidos.\n"
+                    "Na conclusão, inclua obrigatoriamente a orientação dos danos como uma composição de dois vetores, escolhendo e mencionando duas das opções abaixo (o dano é sempre bidimensional):\n"
+                    "  (1) da esquerda para a direita OU da direita para a esquerda;\n"
+                    "  (2) de cima para baixo OU de baixo para cima;\n"
+                    "  (3) de frente para trás OU de trás para frente.\n"
+                    "Considere sempre a perspectiva do motorista do veículo para definir os vetores.\n"
+                    "Exemplo 1:\n"
+                    "Colisão lateral entre dois veículos, em direções opostas, sendo o periciado atingido no flanco esquerdo.\n"
+                    "Conclusão: Danos da esquerda para a direita (lataria entra no veículo) e de frente para trás (outro veículo vinha em direção contrária).\n"
+                    "Exemplo 2:\n"
+                    "Colisão frontal entre dois veículos, em direções opostas, sendo o periciado atingido na porção direita da frente.\n"
+                    "Conclusão: Danos de frente para trás (lataria entra no veículo) e da direita para a esquerda (lataria sai do veículo).\n"
+                    "Explique claramente quais vetores foram identificados no caso analisado, conforme os dados apresentados. Não deixe de incluir essas duas orientações de danos na conclusão.\n"
+                ),
             },
             {
                 "role": "user",
